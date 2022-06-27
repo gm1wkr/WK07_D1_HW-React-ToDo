@@ -20,7 +20,6 @@ function App() {
     )
   });
 
-
   const [newTodo, setNewTodo] = useState("");
 
   const handleToDoInput = (evt) => {
@@ -31,7 +30,6 @@ function App() {
 
   const handleRadioInputs = (evt) => {
     setNewRadioValue(evt.target.value);
-    console.log('Radio VALUE: ', evt.target.value);
   }
 
   const saveTodo = (evt) => {
@@ -53,11 +51,12 @@ function App() {
         
         <div>
           <label htmlFor='priority-high'>High Priority</label>
-            <input type='radio' name='priority' value='high' onChange={handleRadioInputs} />
+          <input type='radio' name='priority' value='high' onChange={handleRadioInputs} />
         
           <label htmlFor='priority-low'>Low Priority</label>
-            <input type='radio' name='priority' value='low' checked='checked' onChange={handleRadioInputs} />
+          <input type='radio' name='priority' value='low' checked='checked' onChange={handleRadioInputs} />
         </div>
+
         <input type='submit' value='Add ToDo' />
       </form>
 
@@ -66,10 +65,6 @@ function App() {
       </ul>
 
     </div>
-
-    
-
-
   );
 }
 
